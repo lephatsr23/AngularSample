@@ -1,0 +1,43 @@
+<a [routerLink]="['/home']" routerLinkActive="router-link-active">Di toi home</a> 
+&nbsp; | 
+<a [routerLink]="['/about']" > Di toi About</a> 
+&nbsp; | 
+<a [routerLink]="['/form']" > Di toi Templeate form</a> 
+&nbsp; | 
+<a [routerLink]="['/reactive-form']" > Di toi reactive form</a> 
+<router-outlet></router-outlet>
+
+
+about.componenet.html
+
+<p>about works!</p>
+<br/>
+
+This is About page ! ban co <span class = "postCss">&nbsp;{{ posts? posts.length : 0}} &nbsp;</span> tin nhan
+<br   /> <br   /> 
+so tin nhan moi <span class ="badge_error">&nbsp;{{ posts? posts.length : 0}} &nbsp;</span>
+<h3>chao ban {{ name }} </h3> 
+<h3>ban da la {{ age }} tuoi !</h3> 
+<h3>Chuc danh cua ban {{ job }} !</h3> 
+
+Posts: <br />
+<!-- <div *ngFor="let post of posts"> 
+    <li> {{ post | json }}</li>
+</div> -->
+
+<table id="customers" style = "border-collapse: clollapse" >
+    <tr>
+        <th>Id</th>
+        <th>Tiltle</th>
+        <th>Author</th>
+      </tr>
+      <tr *ngFor="let post of posts">
+        <td> {{ post?.id }} </td>
+        <td>{{ post?.title }}</td>
+        <td>{{ post?.author }}</td>
+      </tr>
+</table>
+
+<br />
+<button (click)="AddPosts()" > Them nguoi</button> 
+<span class ="badge_error">&nbsp;{{ posts? posts.length : 0}} &nbsp;</span>

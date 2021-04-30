@@ -1,0 +1,22 @@
+<div class ="container"> 
+    <h1>hoc ve reactive form</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name" required />
+      </label>
+      <span *ngIf="profileForm.controls.name.invalid" class="errorMsg" >* Can phai nhap ten </span>
+      <br/>
+
+      <label>
+        Age:
+        <input type="text" formControlName="age" required/>
+        <span *ngIf="profileForm.controls.age.invalid" class="errorMsg" >* Can phai nhap tuoi </span>
+      </label>
+      <br />
+      <button type="submit" class= "btn btn-success" [disabled]="!profileForm.valid">Submit</button>
+    </form>
+     
+</div>
+
+

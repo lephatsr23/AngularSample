@@ -1,0 +1,29 @@
+<h1>Welcome to Angulr 9</h1>
+<h3>Hello World !</h3>
+<h3>Hello ban ten la {{name }} !</h3>
+<h3>ban da la {{ age }} tuoi !</h3> 
+
+<span *ngIf ="age < 18" class = "ageLegel"> Bạn dưới 18 tuổi </span>
+<span *ngIf ="age >=18" class = "ageLegel"> Bạn trên 18 tuổi dược phép vào </span> 
+<br/> <br/>
+<input [(ngModel)] ="name">
+<br/>
+<br/><br/><br/>
+<button (click)="tangTuoi()"> Tăng tuổi </button>
+<br/>
+<br/>
+Danh sach may anh: <br/>
+<div *ngFor="let mayAnh of Camera">
+    <li> {{mayAnh}}</li>
+</div>
+  
+<div>
+    <select > 
+       <option  *ngFor= "let mayAnh of Camera" >
+        {{ mayAnh }}
+       </option>
+    </select>
+</div>
+
+<h3> chung toi cho ban tien, {{name }} !</h3>
+
